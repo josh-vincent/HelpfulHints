@@ -1,7 +1,9 @@
 import React, {useState, createContext} from 'react';
 
-export const globalContext = createContext();
-
+export const notificationContext = createContext();
+//Where you want to usethis context just import {useContext} from 'react'
+// then const notifications = useContext(notificationContext)
+// can get the values from notifications.notifications & set new notifications with notifications.setNotifications()
 /*
   notification object 
     {
