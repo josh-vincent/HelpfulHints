@@ -1,9 +1,10 @@
 import React, {useState, createContext} from 'react';
 
-export const notificationContext = createContext();
+export const NotificationContext = createContext();
 //Where you want to usethis context just import {useContext} from 'react'
-// then const notifications = useContext(notificationContext)
+// then const notifications = useContext(NotificationContext)
 // can get the values from notifications.notifications & set new notifications with notifications.setNotifications()
+
 /*
   notification object 
     {
@@ -14,7 +15,7 @@ export const notificationContext = createContext();
     }
 */
       
-export const NotificationContext = ({children}) => {
+export const NotificationProvider = ({children}) => {
   const [notifications, setNotifications] = useState([]);
   
   const addFunction = ( value ) => {

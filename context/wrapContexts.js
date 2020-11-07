@@ -1,6 +1,6 @@
 import React from 'react'
-import {GlobalContext} from './globalContext'
-import {NotificationContext} from './notificationContext'
+import {GlobalProvider} from './globalContext'
+import {NotificationProvider} from './notificationContext'
 
 //import ContextProvider and wrap around all the elementts that will need the context's
 
@@ -18,8 +18,8 @@ function ProviderComposer({contexts, children}) {
     return (
       <ProviderComposer
         contexts={[
-          <GlobalContext />,
-          <NotificationContext />,
+          <GlobalProvider />,
+          <NotificationProvider />,
          // Next Context .... 
         ]}>
         {children}

@@ -1,8 +1,8 @@
 import React, {useState, createContext} from 'react';
 
-export const globalContext = createContext();
+export const GlobalContext = createContext();
 
-export const GlobalContext = ({children}) => {
+export const GlobalProvider = ({children}) => {
   const [number, setNumber] = useState(0);
   
   const addFunction = ( value ) => {
